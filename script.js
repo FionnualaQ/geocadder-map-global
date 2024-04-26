@@ -110,7 +110,7 @@ var windowWidth = $(window).width();
 
 /// loading POIs data from Google Sheets table///
 $.getJSON(
-  "https://sheets.googleapis.com/v4/spreadsheets/1PyHJnqxj0fAzzbr6nHhIo_4i2QcYIz8WFFCyz-UN0n0/values/Sheets1!A2:I3000?majorDimension=ROWS&key=AIzaSyD4q3JR3nJ9ohF8ggsO97rGVZP5qc5Fn5E",
+  "https://sheets.googleapis.com/v4/spreadsheets/1PyHJnqxj0fAzzbr6nHhIo_4i2QcYIz8WFFCyz-UN0n0/values/Global!A2:I3000?majorDimension=ROWS&key=AIzaSyD4q3JR3nJ9ohF8ggsO97rGVZP5qc5Fn5E",
   function (response) {
     console.log(response);
     response.values.forEach(function (marker) {
@@ -118,7 +118,7 @@ $.getJSON(
         allPointsAmount++;
         var name = marker[0];
 
-        var businessType = marker[2]; // Business Type
+        var businessType = marker[4]; // Business Type
         var businessTypeSmallLetters = businessType
           .toLowerCase()
           .replace(/\s/g, "-");
@@ -131,12 +131,12 @@ $.getJSON(
         var longitude = parseFloat(marker[7]);
         var latitude = parseFloat(marker[6]);
 
-        var yearOpened = marker[3];
+        var yearOpened = marker[4];
 
         var website = marker[5];
         var phone = marker[4];
 
-        var id = marker[8];
+        var id = marker[6];
 
         var selectedPointDetails =
           "<div data-business-type-visible='true' data-business-type='" +
