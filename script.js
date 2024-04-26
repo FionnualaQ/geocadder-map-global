@@ -3,7 +3,7 @@
 $("div.welcome-first").addClass("visible-welcome");
 
 $("div.welcome-first").html(
-  '<div class="welcome-content"><span class="welcome-close-button">X</span><div class="sidebar-content-inner"><h1 class="welcome-popup">Welcome to the 2024 North American Traffic Gardens Map!</h1><p>This is a map of permanent traffic garden installations located in North America.<br><br><img class="welcome-image-icon" src="icons/traffic-garden-court.svg"><span class="welcome-text-icon">Traffic Garden Court</span><div class="welcome-text-description-icon">Traffic Garden Court - street network of surface-applied or "painted" on hard surface.</div></br><img class="welcome-image-icon" src="icons/traffic-garden-park.svg"><span class="welcome-text-icon">Traffic Garden Park</span><div class="welcome-text-description-icon">Traffic Garden Park - networked set of miniature streets (sometimes with curb)</div><br><p class="welcome-text-description-two">This is an on-going project to locate and identify traffic gardens and update known information about each installation. Please send corrections or new information to <a class="welcome-email" href="mailto:Finn@TrafficGardens.com">Finn@TrafficGardens.com</a> to have data corrected as well as having new and missed traffic gardens added to the map. If possible, also include photos or project information so that we can categorize by type.</p></div></div><div class="parent-images"></div><div class="sidebar-content-inner"></div><div></div><div class="buildings"></div></div>'
+  '<div class="welcome-content"><span class="welcome-close-button">X</span><div class="sidebar-content-inner"><h1 class="welcome-popup">Welcome to the 2024 Global Traffic Gardens Map!</h1><p>This is a map of permanent traffic garden installations located all over the world.<br><br><img class="welcome-image-icon" src="icons/traffic-garden-court.svg"><span class="welcome-text-icon">Traffic Garden Court</span><div class="welcome-text-description-icon">Traffic Garden Court - street network of surface-applied or "painted" on hard surface.</div></br><img class="welcome-image-icon" src="icons/traffic-garden-park.svg"><span class="welcome-text-icon">Traffic Garden Park</span><div class="welcome-text-description-icon">Traffic Garden Park - networked set of miniature streets (sometimes with curb)</div><br><p class="welcome-text-description-two">This is an on-going project to locate and identify traffic gardens and update known information about each installation. Please send corrections or new information to <a class="welcome-email" href="mailto:Finn@TrafficGardens.com">Finn@TrafficGardens.com</a> to have data corrected as well as having new and missed traffic gardens added to the map. If possible, also include photos or project information so that we can categorize by type.</p></div></div><div class="parent-images"></div><div class="sidebar-content-inner"></div><div></div><div class="buildings"></div></div>'
 );
 
 $(".first-welcome-button").on("click", function () {
@@ -27,8 +27,8 @@ mapboxgl.accessToken =
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/finnquinn/clu7crwm100g601p6aufr9dfo",
-  center: [-93.2650108, 44.977753],
-  zoom: 6,
+  center: [0,0],
+  zoom: 2,
   preserveDrawingBuffer: true,
   cooperativeGestures: true,
   customAttribution:
