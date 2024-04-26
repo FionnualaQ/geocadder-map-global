@@ -114,7 +114,7 @@ $.getJSON(
   function (response) {
     console.log(response);
     response.values.forEach(function (marker) {
-      if (typeof marker[2] !== "undefined") {
+      if (marker[2] && marker[3]) {
         allPointsAmount++;
         var name = marker[0];
 
@@ -128,8 +128,8 @@ $.getJSON(
 
         var address = marker[1];
 
-        var longitude = parseFloat(marker[7]);
-        var latitude = parseFloat(marker[6]);
+        var longitude = parseFloat(marker[3]);
+        var latitude = parseFloat(marker[2]);
 
         var yearOpened = marker[4];
 
