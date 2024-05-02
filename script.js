@@ -112,7 +112,6 @@ var windowWidth = $(window).width();
 $.getJSON(
   "https://sheets.googleapis.com/v4/spreadsheets/1PyHJnqxj0fAzzbr6nHhIo_4i2QcYIz8WFFCyz-UN0n0/values/Global!A2:I3000?majorDimension=ROWS&key=AIzaSyD4q3JR3nJ9ohF8ggsO97rGVZP5qc5Fn5E",
   function (response) {
-    console.log(response);
     response.values.forEach(function (marker) {
       if (marker[2] && marker[3]) {
         allPointsAmount++;
