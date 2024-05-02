@@ -136,7 +136,7 @@ $.getJSON(
         var website = marker[5];
         var phone = marker[4];
 
-        var id = marker[6];
+        var id = marker[8];
 
         var selectedPointDetails =
           "<div data-business-type-visible='true' data-business-type='" +
