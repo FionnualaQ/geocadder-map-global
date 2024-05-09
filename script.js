@@ -130,10 +130,10 @@ $.getJSON(
         var longitude = parseFloat(marker[3]);
         var latitude = parseFloat(marker[2]);
 
-        var yearOpened = marker[4];
+        var yearOpened = marker[5];
 
-        var website = marker[5];
-        var phone = marker[4];
+        var website = marker[7];
+        var phone = marker[6];
 
         var id = marker[8];
 
