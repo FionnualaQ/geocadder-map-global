@@ -49,7 +49,7 @@ var geocoder = new MapboxGeocoder({
   mapboxgl: mapboxgl,
   countries: "us, ca",
   language: "en-US",
-  placeholder: "Search for address ...",
+  placeholder: "Search for location",
   zoom: 10,
 });
 map.addControl(geocoder, "top-right");
