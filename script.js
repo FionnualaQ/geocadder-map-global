@@ -47,7 +47,6 @@ var map = new mapboxgl.Map({
 var geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
   mapboxgl: mapboxgl,
-  countries: "us, ca",
   language: "en-US",
   placeholder: "Search for location",
   zoom: 10,
@@ -319,7 +318,8 @@ $.getJSON(
           .setPopup(popup)
           .addTo(map);
 
-        el.style.backgroundImage = icons[businessType];
+        el.style.backgroundImage =
+          icons[businessType] ?? `url(icons/${DEFAULT_MARKER_ICON})`;
         el.style.backgroundColor = getColor(iconRules, businessType);
 
         el.addEventListener("click", (e) => {
